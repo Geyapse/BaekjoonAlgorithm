@@ -6,25 +6,24 @@ public class Main {
 		int n = in.nextInt();
 		int m = in.nextInt();
 		int[] arr = new int[n];
-		int count = 0;
-		int temp = m;
+		if(n == 0){
+			System.out.println(0);
+			return;
+		}
 		for(int i = 0; i < n; i++){
 			arr[i] = in.nextInt();
 		}
-		for(int i = 0; i < n; i++){
 
+		int count = 1;
+		int temp = m;
+
+		for(int i = 0; i < n; i++){
 			if(arr[i]<=temp){
 				temp -= arr[i];
 			}else {
-				temp = m;
-				temp -= arr[i];
 				count++;
+				temp = m - arr[i];
 			}
-
-			 if(i == n-1 && temp!=m){
-			 	count++;
-			 }
-
 		}
 
 		System.out.println(count);
