@@ -4,7 +4,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
-		int[]dp = new int[n+2];
+		long[]dp = new long[n+2];
 		dp[1] = 4;
 		dp[2] = 6;
 		for (int i = 3; i <= n; i++) {
