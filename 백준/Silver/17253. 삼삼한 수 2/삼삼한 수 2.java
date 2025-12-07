@@ -4,18 +4,21 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		long n = in.nextLong();
-		if(n == 0){
+		in.close();
+
+		if (n == 0) {
 			System.out.println("NO");
 			return;
 		}
-		String s = Long.toString(n, 3);
-		for(int i = 0; i < s.length(); i++){
-			if(s.charAt(i) == '2'){
+
+		while (n > 0) {
+			if (n % 3 == 2) {
 				System.out.println("NO");
 				return;
 			}
+			n /= 3;
 		}
-		System.out.println("YES");
 
+		System.out.println("YES");
 	}
 }
